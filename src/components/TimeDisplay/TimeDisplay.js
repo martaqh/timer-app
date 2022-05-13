@@ -1,4 +1,5 @@
-const TimeDisplay = timeInMs => {
+
+const TimeDisplay = props => {
 
     const convertTime = timeInMs => {
         let hours = timeInMs / (1000*60*60);
@@ -22,7 +23,7 @@ const TimeDisplay = timeInMs => {
 
     return (
         <div>
-            {convertTime(timeInMs)}
+            {convertTime(props.time)}
         </div>
     )
 }
