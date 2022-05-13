@@ -1,4 +1,4 @@
-
+import styles from './App.module.scss'
 import TimeDisplay from './components/TimeDisplay/TimeDisplay';
 import { useState } from 'react';
 
@@ -24,11 +24,15 @@ const App = () => {
  }
 
   return (
-    <div>
-      <TimeDisplay time={timeCurrent}/>
-      <button onClick={useStart}>Start</button>
-      <button onClick={useStop}>Stop</button>
-      <button onClick={useReset}>Reset</button>
+    <div className={styles.container}>
+      <div className={styles.timerWrapper}>
+        <TimeDisplay time={timeCurrent}/>
+        <div className={styles.buttonsWrapper}>
+          <button className={styles.btn} onClick={useStart}>Start</button>
+          <button className={styles.btn} onClick={useStop}>Stop</button>
+          <button className={styles.btn} onClick={useReset}>Reset</button>
+        </div>
+      </div>
     </div>
   );
 }

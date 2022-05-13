@@ -1,0 +1,11 @@
+@import '../../styles/settings.scss';
+
+.display {
+    color: $color-light;
+    padding: $base-size;
+    margin: $base-size;
+    font-family: $font-text;
+    font-size: $base-size * 4;
+    font-weight: 400;
+    text-align: center;
+}

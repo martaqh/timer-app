@@ -1,3 +1,4 @@
+import styles from './TimeDisplay.module.scss';
 
 const TimeDisplay = props => {
 
@@ -22,7 +23,7 @@ const TimeDisplay = props => {
     }
 
     return (
-        <div>
+        <div className={styles.display}>
             {convertTime(props.time)}
         </div>
     )
