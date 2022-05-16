@@ -1,6 +1,6 @@
 import styles from './App.module.scss'
 import TimeDisplay from './components/TimeDisplay/TimeDisplay';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const App = () => {
  const [timeCurrent, setTimeCurrent] = useState(0);
@@ -22,6 +22,12 @@ const App = () => {
     setTimeCurrent(0);
     clearInterval(timeInterval);
  }
+
+ useEffect(() => {
+  return () => {
+     if(timeInterval) clearInterval(timeInterval);
+  };
+}, [timeInterval]);
 
   return (
     <div className={styles.container}>
